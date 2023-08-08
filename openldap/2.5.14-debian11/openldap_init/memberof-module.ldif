@@ -1,0 +1,20 @@
+# Load memberof module
+dn: cn=module{0},cn=config
+changetype: add
+cn: modulle{0}
+objectClass: olcModuleList
+objectclass: top
+olcModuleload: memberof.la
+olcModulePath: /usr/lib/x86_64-linux-gnu/
+
+# Backend memberOf overlay
+dn: olcOverlay={0}memberof,olcDatabase={1}mdb,cn=config
+changetype: add
+objectClass: olcOverlayConfig
+objectClass: olcMemberOf
+olcOverlay: {0}memberof
+olcMemberOfDangling: ignore
+olcMemberOfRefInt: TRUE
+olcMemberOfGroupOC: groupOfNames
+olcMemberOfMemberAD: member
+olcMemberOfMemberOfAD: memberOf

@@ -1,0 +1,8 @@
+dn: ou=People,==LDAP_BASE_DN==
+# 注意:在旧版本中是 organizationlUnit, 新版本中使用会报错
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=Group,==LDAP_BASE_DN==
+objectClass: organizationalUnit
+ou: Group

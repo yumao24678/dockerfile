@@ -1,0 +1,5 @@
+dn: ==LDAP_BASE_DN==
+objectClass: dcObject
+objectClass: organization
+o: ==BASE_DN_DC==-organization
+dc: ==BASE_DN_DC==
